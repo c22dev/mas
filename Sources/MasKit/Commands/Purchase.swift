@@ -32,7 +32,8 @@ public struct PurchaseCommand: CommandProtocol {
         if #available(macOS 10.15, *) {
             // Purchases are no longer possible as of Catalina.
             // https://github.com/mas-cli/mas/issues/289
-            return .failure(.notSupported)
+            // return .failure(.notSupported)
+            // Appears to work again in macOS 13.4.1 and 13.6.
         }
 
         // Try to download applications with given identifiers and collect results
